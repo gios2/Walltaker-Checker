@@ -22,6 +22,7 @@ so it can work even without changing your wallpaper, showing the image in it
 - the button near the panic one hides the image in the client
 
 **Important**
+
 The videos/ gif don't work
 to change the link number you have to long click the my links button
 to restore your image put the image you want to use when the client reset the wallpaper where there is the executable
