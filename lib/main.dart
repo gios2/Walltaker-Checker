@@ -16,6 +16,11 @@ import 'package:win32_registry/win32_registry.dart';
 Directory folder = Directory.current;
 List immaz = [];
 Future<void> main() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  if (!prefs.containsKey("number")) {
+    prefs.setString("number", "0");
+  }
+
   if (folder.listSync().isNotEmpty) {
     for (var pat in folder.listSync()) {
       if (pat.existsSync() &&
@@ -248,6 +253,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> saveN() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString("number", numberController.text);
+    setState(() {
+      setBy = "Cat";
+      status = "Starting";
+    });
   }
 
   void cropF() {
@@ -444,9 +453,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> loadSavedValue() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      if (prefs.getString("number")!.isNotEmpty) {
-        number = prefs.getString("number")!;
-      }
+      number = prefs.getString("number")!;
     });
   }
 
