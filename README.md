@@ -24,9 +24,13 @@ so it can work even without changing your wallpaper, showing the image in it
 **Important**
 
 The videos/ gif don't work
+
 it sets the same wallpaper for all monitors that are connected
+
 images that have been set as wallpaper show up in recent images
+
 to change the link number you have to long click the my links button
+
 to restore your image put the image you want to use when the client reset the wallpaper where there is the executable
 
 If you want to send me a tip:
